@@ -28,6 +28,7 @@ export default defineConfig({
         {
           text: "JS",
           items: [
+            { text: "基础面试题", link: "/font-end/js/iq" }
           ],
         },
         {
