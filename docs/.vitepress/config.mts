@@ -2,8 +2,11 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: "zh-CN",
   title: "IT面试题汇总",
   description: "A Interview Question Compilations Site",
+  lastUpdated: true,
+  cleanUrls: true,
   themeConfig: {
     logo: "https://raw.githubusercontent.com/CoderYc0923/image-bed/images/images/slogin.svg",
     nav: [
@@ -17,8 +20,9 @@ export default defineConfig({
           items: [{ text: "介绍", link: "/font-end/starting" }],
         },
         {
-          text: "CSS",
+          text: "HTML+CSS",
           items: [
+            { text: "基础面试题", link: "/font-end/html_css/iq" }
           ],
         },
         {
