@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,11 +7,10 @@ export default defineConfig({
   description: "A Interview Question Compilations Site",
   lastUpdated: true,
   cleanUrls: true,
+  base: "/interview-question-compilations",
   themeConfig: {
     logo: "https://raw.githubusercontent.com/CoderYc0923/image-bed/images/images/slogin.svg",
-    nav: [
-      { text: 'Home', link: '/' },
-    ],
+    nav: [{ text: "Home", link: "/" }],
 
     sidebar: {
       "/font-end/": [
@@ -21,57 +20,49 @@ export default defineConfig({
         },
         {
           text: "HTML+CSS",
-          items: [
-            { text: "基础面试题", link: "/font-end/html_css/iq" }
-          ],
+          items: [{ text: "基础面试题", link: "/font-end/html_css/iq" }],
         },
         {
           text: "JS",
-          items: [
-            { text: "基础面试题", link: "/font-end/js/iq" }
-          ],
+          items: [{ text: "基础面试题", link: "/font-end/js/iq" }],
         },
         {
           text: "TS",
-          items: [
-          ],
+          items: [],
         },
         {
           text: "Vue",
-          items: [
-          ],
+          items: [],
         },
         {
           text: "浏览器",
-          items: [
-          ],
+          items: [],
         },
         {
           text: "网络相关",
-          items: [
-          ],
+          items: [],
         },
         {
           text: "性能优化",
-          items: [
-          ],
+          items: [],
         },
         {
           text: "H5适配",
-          items: [
-          ],
+          items: [],
         },
         {
           text: "项目相关",
-          items: [
-          ],
-        }
+          items: [],
+        },
       ],
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/CoderYc0923/interview-question-compilations' }
-    ]
+      {
+        icon: "github",
+        link: "https://github.com/CoderYc0923/interview-question-compilations",
+      },
+    ],
   },
   head: [
     [
@@ -82,4 +73,4 @@ export default defineConfig({
       },
     ],
   ],
-})
+});
