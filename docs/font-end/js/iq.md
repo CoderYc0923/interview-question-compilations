@@ -392,7 +392,7 @@ const mySetInterval = (fun, delay) => {
 ## 31.Promise
 
 ```
-promise是一种异步编程解决方案。只要符合promise/A+规范，就是一个promise。
+promise是一种异步编程解决方案。只要符合promise A+规范，就是一个promise。
 
 promise/A+规范中规定：
 1.promise应该有三种状态，分别是初始状态pending（可改变），最终态fulfilled、rejected。其中，fulfilled必须有一个value值，rejected必须有一个reason
