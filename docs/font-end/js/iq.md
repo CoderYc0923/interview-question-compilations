@@ -273,13 +273,9 @@ new 一个对象的过程：<br> 1.创建一个空对象<br> 2.将这个空对�
 :::
 
 :::tip
-立即执行函数与闭包：<br>
-1.立即执行函数：立即执行函数是一种函数的调用方式，可以让函数在创建后立即执行<br>
-2.立即执行函数的作用： 创建一个独立的作用域，作用域内的变量外部访问不到，避免了全局污染<br>
+立即执行函数与闭包：<br> 1.立即执行函数：立即执行函数是一种函数的调用方式，可以让函数在创建后立即执行<br> 2.立即执行函数的作用： 创建一个独立的作用域，作用域内的变量外部访问不到，避免了全局污染<br>
 
-与闭包的区别：<br>
-1.立即执行函数调用完后会立即销毁，不会占用内存
-2.闭包通过作用域链实现内部函数变量访问外部函数变量，导致被引用的变量不能被垃圾回收机制清除，使用不当会造成内存泄露
+与闭包的区别：<br> 1.立即执行函数调用完后会立即销毁，不会占用内存 2.闭包通过作用域链实现内部函数变量访问外部函数变量，导致被引用的变量不能被垃圾回收机制清除，使用不当会造成内存泄露
 :::
 
 ## 23.内存泄漏
@@ -296,34 +292,39 @@ new 一个对象的过程：<br> 1.创建一个空对象<br> 2.将这个空对�
 ```
 
 :::tip
-垃圾回收机制：<br> 1.引用计数 2.标记清除 3.分代式回收（V8的垃圾回收机制，根据对象存活时间进行分代，将内存分为新生代和老生代两块空间）
+垃圾回收机制：<br> 1.引用计数 2.标记清除 3.分代式回收（V8 的垃圾回收机制，根据对象存活时间进行分代，将内存分为新生代和老生代两块空间）
 :::
 
-## 24.setTimeout和setInterval
+## 24.setTimeout 和 setInterval
+
 ```
 1.setTimeout:在指定时间后执行一次代码
 2.setInterval: 每隔一段时间，重复执行一次代码（时间间隔取决于代码的执行时间，如果一次代码的执行时长超出了间隔时间，setInterval会在代码执行完成后立即进行下一次执行，不会等待间隔时间）
 ```
+
 :::tip
-如果期望某一段代码间隔100ms执行一次，应该使用嵌套的setTimeout<br>
+如果期望某一段代码间隔 100ms 执行一次，应该使用嵌套的 setTimeout<br>
+
 ```js
 const mySetInterval = (fun, delay) => {
-    let timer;
-    function interval() {
-        fun();
-        timer = setTimeout(interval, delay)
-    }
-    timer = setTimeout(interval,delay)
-    return {
-        clear: () => {
-            clearTimeout(timer)
-        }
-    }
-}
+  let timer;
+  function interval() {
+    fun();
+    timer = setTimeout(interval, delay);
+  }
+  timer = setTimeout(interval, delay);
+  return {
+    clear: () => {
+      clearTimeout(timer);
+    },
+  };
+};
 ```
+
 :::
 
 ## 25.延迟加载
+
 ```
 在JS中可以通过defer和async让脚本延迟加载
 1.async：加载完成后立即执行，多个async脚本先下载完的先执行，若DOM未解析完，会阻塞HTML渲染，执行与DOMContentLoaded无关
@@ -331,12 +332,10 @@ const mySetInterval = (fun, delay) => {
 2.defer:加载完成后不立即执行，会在DOM解析完成之后，DOMContentLoaded之前执行，多个defer脚本需要等待所有的defer脚本下载完毕后再依次执行，不会阻塞HTML渲染
     当执行到defer脚本时，会先下载对应的脚本，然后JS继续执行下一个标签，等到defer脚本下载完毕时，需要等待DOM渲染完毕后执行defer脚本，然后触发DOMContentLoaded的回调(多个defer脚本需要等待所有的defer脚本下载完毕后再依次执行)
 ```
-:::tip
-1.浏览器会优先下载同步脚本，后下载defer async 脚本<br>
-2.动态插入JS与async脚本一致<br>
-3.适用场景：<br>
-    1.defer 次屏渲染 广告模块 推荐模块等<br>
-    2.async PV埋点等<br>
+
+:::tip 1.浏览器会优先下载同步脚本，后下载 defer async 脚本<br> 2.动态插入 JS 与 async 脚本一致<br> 3.适用场景：<br>
+1.defer 次屏渲染 广告模块 推荐模块等<br>
+2.async PV 埋点等<br>
 :::
 
 ## 26.ES6 新增
@@ -360,13 +359,15 @@ const mySetInterval = (fun, delay) => {
 ```
 
 ## 28.类的创建和继承
+
 ```
 1.类的创建: 通过构造函数或者class关键字
 2.继承：
-    原型链继承 构造函数继承 组合继承 原型式继承 寄生式继承 寄生组合式继承 
+    原型链继承 构造函数继承 组合继承 原型式继承 寄生式继承 寄生组合式继承
 ```
 
-## 29.this的指向
+## 29.this 的指向
+
 ```
 1.非严格模式下的全局环境,this指向window
 2.在对象中，属性的this指向外层this， 方法中的this指向调用它的对象
@@ -382,12 +383,14 @@ const mySetInterval = (fun, delay) => {
 ```
 
 ## 30.高阶函数和回调函数
+
 ```
 1.高阶函数: 将函数作为入参或者返回值的函数
 2.回调函数：被作为返回值的函数
 ```
 
 ## 31.Promise
+
 ```
 promise是一种异步编程解决方案。只要符合promise/A+规范，就是一个promise。
 
@@ -402,11 +405,13 @@ promise/A+规范中规定：
 ```
 
 ## 32.Generator
+
 ```
 一种特殊的函数，可以通过*关键字定义，yield关键字暂停执行并传递值，用于控制异步流程，一般与迭代器一起使用
 ```
 
 ## 33.async/await
+
 ```
 一种异步编程解决方案，是生成器generator的语法糖，await返回一个Promise
 async/await 让异步函数通过同步代码的展现形式展现，提高代码可读性
@@ -414,6 +419,7 @@ async/await 让异步函数通过同步代码的展现形式展现，提高代�
 ```
 
 ## 34.事件循环
+
 ```
 浏览器中有多个进程，其中渲染进程是一个网页的重要一环
 渲染进程中通过渲染主线程来执行脚本、布局样式的渲染等等工作，同时为了提高运行效率，就引入了事件循环。
@@ -430,13 +436,15 @@ async/await 让异步函数通过同步代码的展现形式展现，提高代�
     等
 ```
 
-## 35.V8隐藏类
+## 35.V8 隐藏类
+
 ```
 隐藏类是一种优化JS对象属性访问的机制，在JS中每创建一个对象，V8都会为其创建一个隐藏类。
 隐藏类通过形状和内联缓存来提高属性访问的性能，可以提高JS代码的执行效率
 ```
 
-## 36.JS的运行机制
+## 36.JS 的运行机制
+
 ```
 JS的运行机制是在浏览器执行的，主要分为三个阶段：解析，执行，渲染
 解析阶段：浏览器会对HTML文档进行解析，生成DOM树和CSSOM树，同时如果HTML中包含JS代码，浏览器会将其解析生成抽象语法树
@@ -450,9 +458,86 @@ JS的运行机制是在浏览器执行的，主要分为三个阶段：解析，
 ```
 
 ## 37.CJS、AMD、CMD
+
 ```
 CJS、AMD、CMD都是用于JS中组织和管理模块的模块系统或规范
 CJS：同步加载模块，模块会在代码执行时立即加载，通过require引入module.exports导出（node.js就是用了cjs）
 AMD：异步加载模块，在定义模块时就声明其依赖，通过define定义，require引入（require.js用了）
 CMD：异步加载模块，在使用模块时才声明其依赖，更加懒加载，通过define定义，require引入（sea.js用了）
 ```
+
+## 38.Ajax
+
+```
+Ajax是一种用于在浏览器中进行异步通信的技术， 通常用于通过网络请求从服务器获取数据，而不用刷新整个页面
+Ajax的核心是XMLHttpRequest
+
+XMLHttpRequest的属性：
+1.onreadystatechange 处理服务器响应
+2.readyState 服务器响应的状态信息(0: 请求未初始化 1：请求提出 2：请求发送（可以获取头部信息） 3：请求处理中 4：请求已完成)
+3.responseText 获取服务器返回数据
+4.status 服务器HTTP状态码
+
+XMLHttpRequest的方法：
+1.open
+2.send
+3.setRequestHeader
+4.abort 取消请求
+
+```
+
+## 39.Axios
+
+````
+Axios是一个基于promise的对Ajax的一种封装
+优点：
+    1.支持promise api
+    2.拦截请求和相响应 axios.interceptors.request.use,axios.interceptors.response.use
+    3.内置转换请求数据和响应数据，并对响应数据做JSON处理
+    4.安全性更高，支持防御CSRF
+````
+
+:::tip
+Axios取消请求推荐使用AbortController<br>
+
+```js
+const controller = new AbortController();
+ ​
+    axios.get('/foo/bar', {
+       signal: controller.signal
+    }).then(function(response) {
+       //...
+    });
+ ​
+    // 取消请求
+    controller.abort();
+```
+:::
+
+## 跨域
+```
+由于浏览器同源政策的限制，不同源会造成跨域（协议，域名，端口号其中一个或多个不同）
+跨域解决方案：
+1.jsonp： 解决get请求跨域，通过script标签的src不受同源政策限制的原理
+2.postMessage： 解决多窗口、嵌套iframe之间的跨域数据传递
+3.CORS跨域资源共享: 后端设置access-control-allow-origin
+4.中间件代理：
+    正向代理和反向代理
+    正向代理：
+        客户端向代理服务器发送请求并指定目标服务器，代理服务器再将请求发送给目标服务器。
+        正向代理可以隐藏客户端真实IP，提供匿名访问和访问控制等功能
+        常用于跨防火墙访问互联网、访问被封禁的网站
+    反向代理：
+        客户端发送请求到代理服务器，代理服务器判断请求的目标服务器然后发送
+        客户端不能直接访问目标服务器，而是通过反向代理服务器来获取服务。
+        反向代理可以实现负载均衡、高可用性和安全性等
+        常用于高并发访问、保护后端服务器、提供缓存和SSL终止等
+    区别：
+        正向代理代理客户端，反向代理代理服务器
+        正向代理隐藏客户端，反向代理隐藏服务器
+```
+
+:::tip
+反向代理为什么叫反向代理<br>
+从用户角度看，代理服务器被称为反向；从代理结构看。客户端与代理服务器属于一个局域网是正向，代理服务器和后端服务器在同一个局域网是反向
+:::
