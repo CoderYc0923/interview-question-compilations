@@ -257,37 +257,42 @@ console.log("script end");
 
 ```js
 //例如： 给一个200url的数组，通过这些url来发送请求，要求并发请求数量不能超过5个， 通过promise.race
-const promisePool = (taskList, limit) => {
-    return new Promise((resolve, reject) => {
-        try{
-            const len = taskList.length
-            const pool = []
-            const res = new Array(len)
-            let finishCount = 0
-            for (let i = 0; i < len; i++) {
-                const task = taskList[i]()
-                //promise结束回调
-                const handler = (info) => {
-                    //将执行完成的任务删除
-                    pool.slice(pool.indexOf(task), 1)
-                    res[i] = info
-                    finishCount++
-                    if (finishCount === len) reslove(res)
-                }
-                task.then((data) => {
-                    handler(data)
-                }, (err) => {
-                    handler(err)
-                })
-                pool.push(task)
-
-                if (pool.length >= limit) {
-                    await Promise.race(pool)
-                }
-            }
-        } catch(err) {
-            reject(err)
+class PromisePool {
+  //取消阀门
+  private isStop = false
+  run = async (taskList, max) => {
+    return new Pormise(async (resolve, reject) => {
+      try {
+        this.isStop = false
+        const len = taskList.length
+        const pool = []
+        const res = new Array(len)
+        let finishCount = 0
+        for (let i = 0; i < len; i++) {
+          if (this.isStop) return reject('并发终止')
+          let task = taskList[i]
+          //若此时并发池已满，等待并发池内的任务结束
+          if (pool.length >= max) await Promise.race(pool)
+          pool.push(task)
+          const handler = (info) => {
+            pool.slice(pool.indexOf(task), 1)
+            res[i] = info
+            finishCount++
+            if (finishCount === len) reslove(res)
+          }
+          task.then(data => {
+            handler(data)
+          }).catch(err => {
+            handler(err)
+          })
         }
+      } catch (err) {
+        reject(err)
+      }
     })
+  },
+  stop = () => {
+    this.isStop = true
+  }
 }
 ```
