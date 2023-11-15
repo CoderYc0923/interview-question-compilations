@@ -1,4 +1,4 @@
-import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"font-end/js/iq.md","filePath":"font-end/js/iq.md","lastUpdated":1699940183000}'),p={name:"font-end/js/iq.md"},e=l(`<h2 id="_1-js-数据类型" tabindex="-1">1.JS 数据类型 <a class="header-anchor" href="#_1-js-数据类型" aria-label="Permalink to &quot;1.JS 数据类型&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">基本数据类型：Number String Boolean Null Undefined BigInt Symbol</span></span>
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"font-end/js/iq.md","filePath":"font-end/js/iq.md","lastUpdated":1699955381000}'),p={name:"font-end/js/iq.md"},e=l(`<h2 id="_1-js-数据类型" tabindex="-1">1.JS 数据类型 <a class="header-anchor" href="#_1-js-数据类型" aria-label="Permalink to &quot;1.JS 数据类型&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">基本数据类型：Number String Boolean Null Undefined BigInt Symbol</span></span>
 <span class="line"><span style="color:#e1e4e8;">引用数据类型：Object(包括Array Date 正则 Function Object Map Set WeakMap WeakSet)</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">基本数据类型：Number String Boolean Null Undefined BigInt Symbol</span></span>
 <span class="line"><span style="color:#24292e;">引用数据类型：Object(包括Array Date 正则 Function Object Map Set WeakMap WeakSet)</span></span></code></pre></div><h2 id="_2-包装类型" tabindex="-1">2.包装类型 <a class="header-anchor" href="#_2-包装类型" aria-label="Permalink to &quot;2.包装类型&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">为了能在基本数据类型上执行操作，JS提供了相应的包装类型:</span></span>
 <span class="line"><span style="color:#e1e4e8;">Number String Boolean</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">为了能在基本数据类型上执行操作，JS提供了相应的包装类型:</span></span>
@@ -218,33 +218,33 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#24292e;">    c.未清除的DOM引用 —— 解决：手动将引用设置为null</span></span>
 <span class="line"><span style="color:#24292e;">    d.循环引用：当垃圾回收机制为引用计数时会出现</span></span>
 <span class="line"><span style="color:#24292e;">    e.定时器 —— 解决：在定时器不再使用的时候清除定时器</span></span>
-<span class="line"><span style="color:#24292e;">    f.未清理的console —— 解决： 清理console</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>垃圾回收机制：<br> 1.引用计数 2.标记清除 3.分代式回收（V8的垃圾回收机制，根据对象存活时间进行分代，将内存分为新生代和老生代两块空间）</p></div><h2 id="_24-settimeout和setinterval" tabindex="-1">24.setTimeout和setInterval <a class="header-anchor" href="#_24-settimeout和setinterval" aria-label="Permalink to &quot;24.setTimeout和setInterval&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.setTimeout:在指定时间后执行一次代码</span></span>
+<span class="line"><span style="color:#24292e;">    f.未清理的console —— 解决： 清理console</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>垃圾回收机制：<br> 1.引用计数 2.标记清除 3.分代式回收（V8 的垃圾回收机制，根据对象存活时间进行分代，将内存分为新生代和老生代两块空间）</p></div><h2 id="_24-settimeout-和-setinterval" tabindex="-1">24.setTimeout 和 setInterval <a class="header-anchor" href="#_24-settimeout-和-setinterval" aria-label="Permalink to &quot;24.setTimeout 和 setInterval&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.setTimeout:在指定时间后执行一次代码</span></span>
 <span class="line"><span style="color:#e1e4e8;">2.setInterval: 每隔一段时间，重复执行一次代码（时间间隔取决于代码的执行时间，如果一次代码的执行时长超出了间隔时间，setInterval会在代码执行完成后立即进行下一次执行，不会等待间隔时间）</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">1.setTimeout:在指定时间后执行一次代码</span></span>
-<span class="line"><span style="color:#24292e;">2.setInterval: 每隔一段时间，重复执行一次代码（时间间隔取决于代码的执行时间，如果一次代码的执行时长超出了间隔时间，setInterval会在代码执行完成后立即进行下一次执行，不会等待间隔时间）</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>如果期望某一段代码间隔100ms执行一次，应该使用嵌套的setTimeout<br></p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#F97583;">const</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">mySetInterval</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> (</span><span style="color:#FFAB70;">fun</span><span style="color:#E1E4E8;">, </span><span style="color:#FFAB70;">delay</span><span style="color:#E1E4E8;">) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> {</span></span>
-<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#F97583;">let</span><span style="color:#E1E4E8;"> timer;</span></span>
-<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#F97583;">function</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">interval</span><span style="color:#E1E4E8;">() {</span></span>
-<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">fun</span><span style="color:#E1E4E8;">();</span></span>
-<span class="line"><span style="color:#E1E4E8;">        timer </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">setTimeout</span><span style="color:#E1E4E8;">(interval, delay)</span></span>
-<span class="line"><span style="color:#E1E4E8;">    }</span></span>
-<span class="line"><span style="color:#E1E4E8;">    timer </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">setTimeout</span><span style="color:#E1E4E8;">(interval,delay)</span></span>
-<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#F97583;">return</span><span style="color:#E1E4E8;"> {</span></span>
-<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">clear</span><span style="color:#E1E4E8;">: () </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> {</span></span>
-<span class="line"><span style="color:#E1E4E8;">            </span><span style="color:#B392F0;">clearTimeout</span><span style="color:#E1E4E8;">(timer)</span></span>
-<span class="line"><span style="color:#E1E4E8;">        }</span></span>
-<span class="line"><span style="color:#E1E4E8;">    }</span></span>
-<span class="line"><span style="color:#E1E4E8;">}</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#D73A49;">const</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">mySetInterval</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> (</span><span style="color:#E36209;">fun</span><span style="color:#24292E;">, </span><span style="color:#E36209;">delay</span><span style="color:#24292E;">) </span><span style="color:#D73A49;">=&gt;</span><span style="color:#24292E;"> {</span></span>
-<span class="line"><span style="color:#24292E;">    </span><span style="color:#D73A49;">let</span><span style="color:#24292E;"> timer;</span></span>
-<span class="line"><span style="color:#24292E;">    </span><span style="color:#D73A49;">function</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">interval</span><span style="color:#24292E;">() {</span></span>
-<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">fun</span><span style="color:#24292E;">();</span></span>
-<span class="line"><span style="color:#24292E;">        timer </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">setTimeout</span><span style="color:#24292E;">(interval, delay)</span></span>
-<span class="line"><span style="color:#24292E;">    }</span></span>
-<span class="line"><span style="color:#24292E;">    timer </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">setTimeout</span><span style="color:#24292E;">(interval,delay)</span></span>
-<span class="line"><span style="color:#24292E;">    </span><span style="color:#D73A49;">return</span><span style="color:#24292E;"> {</span></span>
-<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">clear</span><span style="color:#24292E;">: () </span><span style="color:#D73A49;">=&gt;</span><span style="color:#24292E;"> {</span></span>
-<span class="line"><span style="color:#24292E;">            </span><span style="color:#6F42C1;">clearTimeout</span><span style="color:#24292E;">(timer)</span></span>
-<span class="line"><span style="color:#24292E;">        }</span></span>
-<span class="line"><span style="color:#24292E;">    }</span></span>
-<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div></div><h2 id="_25-延迟加载" tabindex="-1">25.延迟加载 <a class="header-anchor" href="#_25-延迟加载" aria-label="Permalink to &quot;25.延迟加载&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">在JS中可以通过defer和async让脚本延迟加载</span></span>
+<span class="line"><span style="color:#24292e;">2.setInterval: 每隔一段时间，重复执行一次代码（时间间隔取决于代码的执行时间，如果一次代码的执行时长超出了间隔时间，setInterval会在代码执行完成后立即进行下一次执行，不会等待间隔时间）</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>如果期望某一段代码间隔 100ms 执行一次，应该使用嵌套的 setTimeout<br></p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#F97583;">const</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">mySetInterval</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> (</span><span style="color:#FFAB70;">fun</span><span style="color:#E1E4E8;">, </span><span style="color:#FFAB70;">delay</span><span style="color:#E1E4E8;">) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#F97583;">let</span><span style="color:#E1E4E8;"> timer;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#F97583;">function</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">interval</span><span style="color:#E1E4E8;">() {</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">fun</span><span style="color:#E1E4E8;">();</span></span>
+<span class="line"><span style="color:#E1E4E8;">    timer </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">setTimeout</span><span style="color:#E1E4E8;">(interval, delay);</span></span>
+<span class="line"><span style="color:#E1E4E8;">  }</span></span>
+<span class="line"><span style="color:#E1E4E8;">  timer </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">setTimeout</span><span style="color:#E1E4E8;">(interval, delay);</span></span>
+<span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#F97583;">return</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">clear</span><span style="color:#E1E4E8;">: () </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#B392F0;">clearTimeout</span><span style="color:#E1E4E8;">(timer);</span></span>
+<span class="line"><span style="color:#E1E4E8;">    },</span></span>
+<span class="line"><span style="color:#E1E4E8;">  };</span></span>
+<span class="line"><span style="color:#E1E4E8;">};</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#D73A49;">const</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">mySetInterval</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> (</span><span style="color:#E36209;">fun</span><span style="color:#24292E;">, </span><span style="color:#E36209;">delay</span><span style="color:#24292E;">) </span><span style="color:#D73A49;">=&gt;</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">  </span><span style="color:#D73A49;">let</span><span style="color:#24292E;"> timer;</span></span>
+<span class="line"><span style="color:#24292E;">  </span><span style="color:#D73A49;">function</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">interval</span><span style="color:#24292E;">() {</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">fun</span><span style="color:#24292E;">();</span></span>
+<span class="line"><span style="color:#24292E;">    timer </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">setTimeout</span><span style="color:#24292E;">(interval, delay);</span></span>
+<span class="line"><span style="color:#24292E;">  }</span></span>
+<span class="line"><span style="color:#24292E;">  timer </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">setTimeout</span><span style="color:#24292E;">(interval, delay);</span></span>
+<span class="line"><span style="color:#24292E;">  </span><span style="color:#D73A49;">return</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">clear</span><span style="color:#24292E;">: () </span><span style="color:#D73A49;">=&gt;</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">      </span><span style="color:#6F42C1;">clearTimeout</span><span style="color:#24292E;">(timer);</span></span>
+<span class="line"><span style="color:#24292E;">    },</span></span>
+<span class="line"><span style="color:#24292E;">  };</span></span>
+<span class="line"><span style="color:#24292E;">};</span></span></code></pre></div></div><h2 id="_25-延迟加载" tabindex="-1">25.延迟加载 <a class="header-anchor" href="#_25-延迟加载" aria-label="Permalink to &quot;25.延迟加载&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">在JS中可以通过defer和async让脚本延迟加载</span></span>
 <span class="line"><span style="color:#e1e4e8;">1.async：加载完成后立即执行，多个async脚本先下载完的先执行，若DOM未解析完，会阻塞HTML渲染，执行与DOMContentLoaded无关</span></span>
 <span class="line"><span style="color:#e1e4e8;">    当执行到async脚本时，会先下载对应的脚本，然后JS继续执行下一个标签，等到async脚本下载完毕时，若DOM正在渲染则暂停渲染，执行async脚本。（多个async脚本先下载完的先执行）</span></span>
 <span class="line"><span style="color:#e1e4e8;">2.defer:加载完成后不立即执行，会在DOM解析完成之后，DOMContentLoaded之前执行，多个defer脚本需要等待所有的defer脚本下载完毕后再依次执行，不会阻塞HTML渲染</span></span>
@@ -252,7 +252,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#24292e;">1.async：加载完成后立即执行，多个async脚本先下载完的先执行，若DOM未解析完，会阻塞HTML渲染，执行与DOMContentLoaded无关</span></span>
 <span class="line"><span style="color:#24292e;">    当执行到async脚本时，会先下载对应的脚本，然后JS继续执行下一个标签，等到async脚本下载完毕时，若DOM正在渲染则暂停渲染，执行async脚本。（多个async脚本先下载完的先执行）</span></span>
 <span class="line"><span style="color:#24292e;">2.defer:加载完成后不立即执行，会在DOM解析完成之后，DOMContentLoaded之前执行，多个defer脚本需要等待所有的defer脚本下载完毕后再依次执行，不会阻塞HTML渲染</span></span>
-<span class="line"><span style="color:#24292e;">    当执行到defer脚本时，会先下载对应的脚本，然后JS继续执行下一个标签，等到defer脚本下载完毕时，需要等待DOM渲染完毕后执行defer脚本，然后触发DOMContentLoaded的回调(多个defer脚本需要等待所有的defer脚本下载完毕后再依次执行)</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>1.浏览器会优先下载同步脚本，后下载defer async 脚本<br> 2.动态插入JS与async脚本一致<br> 3.适用场景：<br> 1.defer 次屏渲染 广告模块 推荐模块等<br> 2.async PV埋点等<br></p></div><h2 id="_26-es6-新增" tabindex="-1">26.ES6 新增 <a class="header-anchor" href="#_26-es6-新增" aria-label="Permalink to &quot;26.ES6 新增&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.语法：ES6引入了新语法，比如箭头函数、模板字符串、解构赋值、默认参数值、展开运算符等</span></span>
+<span class="line"><span style="color:#24292e;">    当执行到defer脚本时，会先下载对应的脚本，然后JS继续执行下一个标签，等到defer脚本下载完毕时，需要等待DOM渲染完毕后执行defer脚本，然后触发DOMContentLoaded的回调(多个defer脚本需要等待所有的defer脚本下载完毕后再依次执行)</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">1.浏览器会优先下载同步脚本，后下载 defer async 脚本<br> 2.动态插入 JS 与 async 脚本一致<br> 3.适用场景：<br></p><p>1.defer 次屏渲染 广告模块 推荐模块等<br> 2.async PV 埋点等<br></p></div><h2 id="_26-es6-新增" tabindex="-1">26.ES6 新增 <a class="header-anchor" href="#_26-es6-新增" aria-label="Permalink to &quot;26.ES6 新增&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.语法：ES6引入了新语法，比如箭头函数、模板字符串、解构赋值、默认参数值、展开运算符等</span></span>
 <span class="line"><span style="color:#e1e4e8;">2.作用域： 新增块级作用域，使用let const</span></span>
 <span class="line"><span style="color:#e1e4e8;">3.类和模块：使用class关键词定义类，使用import导入export导出模块</span></span>
 <span class="line"><span style="color:#e1e4e8;">4.迭代器和生成器：引入Iterator迭代器和generator生成器，迭代器提供了遍历数据结构的通用方式，生成器可以简化异步编程的写法</span></span>
@@ -272,7 +272,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#e1e4e8;">2.继承：</span></span>
 <span class="line"><span style="color:#e1e4e8;">    原型链继承 构造函数继承 组合继承 原型式继承 寄生式继承 寄生组合式继承</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">1.类的创建: 通过构造函数或者class关键字</span></span>
 <span class="line"><span style="color:#24292e;">2.继承：</span></span>
-<span class="line"><span style="color:#24292e;">    原型链继承 构造函数继承 组合继承 原型式继承 寄生式继承 寄生组合式继承</span></span></code></pre></div><h2 id="_29-this的指向" tabindex="-1">29.this的指向 <a class="header-anchor" href="#_29-this的指向" aria-label="Permalink to &quot;29.this的指向&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.非严格模式下的全局环境,this指向window</span></span>
+<span class="line"><span style="color:#24292e;">    原型链继承 构造函数继承 组合继承 原型式继承 寄生式继承 寄生组合式继承</span></span></code></pre></div><h2 id="_29-this-的指向" tabindex="-1">29.this 的指向 <a class="header-anchor" href="#_29-this-的指向" aria-label="Permalink to &quot;29.this 的指向&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.非严格模式下的全局环境,this指向window</span></span>
 <span class="line"><span style="color:#e1e4e8;">2.在对象中，属性的this指向外层this， 方法中的this指向调用它的对象</span></span>
 <span class="line"><span style="color:#e1e4e8;">3.回调函数中的this指向window（事件回调的this指向e.currentTarget）</span></span>
 <span class="line"><span style="color:#e1e4e8;">4.箭头函数中的this指向当前函数外的this（回调函数使用箭头函数时，this指向当前函数外的this）</span></span>
@@ -294,7 +294,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#24292e;">    2.如果函数中有this，且函数中包含多个对象，尽管函数是被最外层的对象调用的 但是this还是指向它的上一级对象</span></span>
 <span class="line"><span style="color:#24292e;">    3.当this遇到return， 如果return一个对象，this指向这个对象，不然this就指向函数的实例(返回null也是指向函数的实例)</span></span></code></pre></div><h2 id="_30-高阶函数和回调函数" tabindex="-1">30.高阶函数和回调函数 <a class="header-anchor" href="#_30-高阶函数和回调函数" aria-label="Permalink to &quot;30.高阶函数和回调函数&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">1.高阶函数: 将函数作为入参或者返回值的函数</span></span>
 <span class="line"><span style="color:#e1e4e8;">2.回调函数：被作为返回值的函数</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">1.高阶函数: 将函数作为入参或者返回值的函数</span></span>
-<span class="line"><span style="color:#24292e;">2.回调函数：被作为返回值的函数</span></span></code></pre></div><h2 id="_31-promise" tabindex="-1">31.Promise <a class="header-anchor" href="#_31-promise" aria-label="Permalink to &quot;31.Promise&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">promise是一种异步编程解决方案。只要符合promise/A+规范，就是一个promise。</span></span>
+<span class="line"><span style="color:#24292e;">2.回调函数：被作为返回值的函数</span></span></code></pre></div><h2 id="_31-promise" tabindex="-1">31.Promise <a class="header-anchor" href="#_31-promise" aria-label="Permalink to &quot;31.Promise&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">promise是一种异步编程解决方案。只要符合promise A+规范，就是一个promise。</span></span>
 <span class="line"><span style="color:#e1e4e8;"></span></span>
 <span class="line"><span style="color:#e1e4e8;">promise/A+规范中规定：</span></span>
 <span class="line"><span style="color:#e1e4e8;">1.promise应该有三种状态，分别是初始状态pending（可改变），最终态fulfilled、rejected。其中，fulfilled必须有一个value值，rejected必须有一个reason</span></span>
@@ -303,7 +303,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#e1e4e8;">    then方法接收两个参数 onFulfilled 和 onRejected,这两个参数必须是函数类型且应该是微任务，若参数不是函数，应该被忽略</span></span>
 <span class="line"><span style="color:#e1e4e8;">    在状态变为fulfilled时，应该调用onFulfilled，参数是value,且只能调用一次</span></span>
 <span class="line"><span style="color:#e1e4e8;">    在状态变为rejected时，应该调用onRejected， 参数是reason，且只能调用一次</span></span>
-<span class="line"><span style="color:#e1e4e8;">    then方法返回一个promise且可以被多次调用</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">promise是一种异步编程解决方案。只要符合promise/A+规范，就是一个promise。</span></span>
+<span class="line"><span style="color:#e1e4e8;">    then方法返回一个promise且可以被多次调用</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">promise是一种异步编程解决方案。只要符合promise A+规范，就是一个promise。</span></span>
 <span class="line"><span style="color:#24292e;"></span></span>
 <span class="line"><span style="color:#24292e;">promise/A+规范中规定：</span></span>
 <span class="line"><span style="color:#24292e;">1.promise应该有三种状态，分别是初始状态pending（可改变），最终态fulfilled、rejected。其中，fulfilled必须有一个value值，rejected必须有一个reason</span></span>
@@ -338,9 +338,9 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#24292e;">    微任务队列： promise mutationObserver等</span></span>
 <span class="line"><span style="color:#24292e;">    交互队列： 用户交互后的回调</span></span>
 <span class="line"><span style="color:#24292e;">    延时队列： 计时器回调</span></span>
-<span class="line"><span style="color:#24292e;">    等</span></span></code></pre></div><h2 id="_35-v8隐藏类" tabindex="-1">35.V8隐藏类 <a class="header-anchor" href="#_35-v8隐藏类" aria-label="Permalink to &quot;35.V8隐藏类&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">隐藏类是一种优化JS对象属性访问的机制，在JS中每创建一个对象，V8都会为其创建一个隐藏类。</span></span>
+<span class="line"><span style="color:#24292e;">    等</span></span></code></pre></div><h2 id="_35-v8-隐藏类" tabindex="-1">35.V8 隐藏类 <a class="header-anchor" href="#_35-v8-隐藏类" aria-label="Permalink to &quot;35.V8 隐藏类&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">隐藏类是一种优化JS对象属性访问的机制，在JS中每创建一个对象，V8都会为其创建一个隐藏类。</span></span>
 <span class="line"><span style="color:#e1e4e8;">隐藏类通过形状和内联缓存来提高属性访问的性能，可以提高JS代码的执行效率</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">隐藏类是一种优化JS对象属性访问的机制，在JS中每创建一个对象，V8都会为其创建一个隐藏类。</span></span>
-<span class="line"><span style="color:#24292e;">隐藏类通过形状和内联缓存来提高属性访问的性能，可以提高JS代码的执行效率</span></span></code></pre></div><h2 id="_36-js的运行机制" tabindex="-1">36.JS的运行机制 <a class="header-anchor" href="#_36-js的运行机制" aria-label="Permalink to &quot;36.JS的运行机制&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">JS的运行机制是在浏览器执行的，主要分为三个阶段：解析，执行，渲染</span></span>
+<span class="line"><span style="color:#24292e;">隐藏类通过形状和内联缓存来提高属性访问的性能，可以提高JS代码的执行效率</span></span></code></pre></div><h2 id="_36-js-的运行机制" tabindex="-1">36.JS 的运行机制 <a class="header-anchor" href="#_36-js-的运行机制" aria-label="Permalink to &quot;36.JS 的运行机制&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">JS的运行机制是在浏览器执行的，主要分为三个阶段：解析，执行，渲染</span></span>
 <span class="line"><span style="color:#e1e4e8;">解析阶段：浏览器会对HTML文档进行解析，生成DOM树和CSSOM树，同时如果HTML中包含JS代码，浏览器会将其解析生成抽象语法树</span></span>
 <span class="line"><span style="color:#e1e4e8;">执行阶段：浏览器会逐行执行JS代码，执行过程中通过作用域链和执行上下文栈来管理变量和函数的访问权限：</span></span>
 <span class="line"><span style="color:#e1e4e8;">    1.创建全局执行上下文</span></span>
@@ -362,4 +362,94 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#e1e4e8;">CMD：异步加载模块，在使用模块时才声明其依赖，更加懒加载，通过define定义，require引入（sea.js用了）</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">CJS、AMD、CMD都是用于JS中组织和管理模块的模块系统或规范</span></span>
 <span class="line"><span style="color:#24292e;">CJS：同步加载模块，模块会在代码执行时立即加载，通过require引入module.exports导出（node.js就是用了cjs）</span></span>
 <span class="line"><span style="color:#24292e;">AMD：异步加载模块，在定义模块时就声明其依赖，通过define定义，require引入（require.js用了）</span></span>
-<span class="line"><span style="color:#24292e;">CMD：异步加载模块，在使用模块时才声明其依赖，更加懒加载，通过define定义，require引入（sea.js用了）</span></span></code></pre></div>`,86),o=[e];function c(t,r,i,y,E,d){return a(),n("div",null,o)}const b=s(p,[["render",c]]);export{u as __pageData,b as default};
+<span class="line"><span style="color:#24292e;">CMD：异步加载模块，在使用模块时才声明其依赖，更加懒加载，通过define定义，require引入（sea.js用了）</span></span></code></pre></div><h2 id="_38-ajax" tabindex="-1">38.Ajax <a class="header-anchor" href="#_38-ajax" aria-label="Permalink to &quot;38.Ajax&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">Ajax是一种用于在浏览器中进行异步通信的技术， 通常用于通过网络请求从服务器获取数据，而不用刷新整个页面</span></span>
+<span class="line"><span style="color:#e1e4e8;">Ajax的核心是XMLHttpRequest</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">XMLHttpRequest的属性：</span></span>
+<span class="line"><span style="color:#e1e4e8;">1.onreadystatechange 处理服务器响应</span></span>
+<span class="line"><span style="color:#e1e4e8;">2.readyState 服务器响应的状态信息(0: 请求未初始化 1：请求提出 2：请求发送（可以获取头部信息） 3：请求处理中 4：请求已完成)</span></span>
+<span class="line"><span style="color:#e1e4e8;">3.responseText 获取服务器返回数据</span></span>
+<span class="line"><span style="color:#e1e4e8;">4.status 服务器HTTP状态码</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">XMLHttpRequest的方法：</span></span>
+<span class="line"><span style="color:#e1e4e8;">1.open</span></span>
+<span class="line"><span style="color:#e1e4e8;">2.send</span></span>
+<span class="line"><span style="color:#e1e4e8;">3.setRequestHeader</span></span>
+<span class="line"><span style="color:#e1e4e8;">4.abort 取消请求</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">Ajax是一种用于在浏览器中进行异步通信的技术， 通常用于通过网络请求从服务器获取数据，而不用刷新整个页面</span></span>
+<span class="line"><span style="color:#24292e;">Ajax的核心是XMLHttpRequest</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">XMLHttpRequest的属性：</span></span>
+<span class="line"><span style="color:#24292e;">1.onreadystatechange 处理服务器响应</span></span>
+<span class="line"><span style="color:#24292e;">2.readyState 服务器响应的状态信息(0: 请求未初始化 1：请求提出 2：请求发送（可以获取头部信息） 3：请求处理中 4：请求已完成)</span></span>
+<span class="line"><span style="color:#24292e;">3.responseText 获取服务器返回数据</span></span>
+<span class="line"><span style="color:#24292e;">4.status 服务器HTTP状态码</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">XMLHttpRequest的方法：</span></span>
+<span class="line"><span style="color:#24292e;">1.open</span></span>
+<span class="line"><span style="color:#24292e;">2.send</span></span>
+<span class="line"><span style="color:#24292e;">3.setRequestHeader</span></span>
+<span class="line"><span style="color:#24292e;">4.abort 取消请求</span></span></code></pre></div><h2 id="_39-axios" tabindex="-1">39.Axios <a class="header-anchor" href="#_39-axios" aria-label="Permalink to &quot;39.Axios&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">Axios是一个基于promise的对Ajax的一种封装</span></span>
+<span class="line"><span style="color:#e1e4e8;">优点：</span></span>
+<span class="line"><span style="color:#e1e4e8;">    1.支持promise api</span></span>
+<span class="line"><span style="color:#e1e4e8;">    2.拦截请求和相响应 axios.interceptors.request.use,axios.interceptors.response.use</span></span>
+<span class="line"><span style="color:#e1e4e8;">    3.内置转换请求数据和响应数据，并对响应数据做JSON处理</span></span>
+<span class="line"><span style="color:#e1e4e8;">    4.安全性更高，支持防御CSRF</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">Axios是一个基于promise的对Ajax的一种封装</span></span>
+<span class="line"><span style="color:#24292e;">优点：</span></span>
+<span class="line"><span style="color:#24292e;">    1.支持promise api</span></span>
+<span class="line"><span style="color:#24292e;">    2.拦截请求和相响应 axios.interceptors.request.use,axios.interceptors.response.use</span></span>
+<span class="line"><span style="color:#24292e;">    3.内置转换请求数据和响应数据，并对响应数据做JSON处理</span></span>
+<span class="line"><span style="color:#24292e;">    4.安全性更高，支持防御CSRF</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>Axios取消请求推荐使用AbortController<br></p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#F97583;">const</span><span style="color:#E1E4E8;"> </span><span style="color:#79B8FF;">controller</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">new</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">AbortController</span><span style="color:#E1E4E8;">();</span></span>
+<span class="line"><span style="color:#E1E4E8;"> ​</span></span>
+<span class="line"><span style="color:#E1E4E8;">    axios.</span><span style="color:#B392F0;">get</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">&#39;/foo/bar&#39;</span><span style="color:#E1E4E8;">, {</span></span>
+<span class="line"><span style="color:#E1E4E8;">       signal: controller.signal</span></span>
+<span class="line"><span style="color:#E1E4E8;">    }).</span><span style="color:#B392F0;">then</span><span style="color:#E1E4E8;">(</span><span style="color:#F97583;">function</span><span style="color:#E1E4E8;">(</span><span style="color:#FFAB70;">response</span><span style="color:#E1E4E8;">) {</span></span>
+<span class="line"><span style="color:#E1E4E8;">       </span><span style="color:#6A737D;">//...</span></span>
+<span class="line"><span style="color:#E1E4E8;">    });</span></span>
+<span class="line"><span style="color:#E1E4E8;"> ​</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#6A737D;">// 取消请求</span></span>
+<span class="line"><span style="color:#E1E4E8;">    controller.</span><span style="color:#B392F0;">abort</span><span style="color:#E1E4E8;">();</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#D73A49;">const</span><span style="color:#24292E;"> </span><span style="color:#005CC5;">controller</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">new</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">AbortController</span><span style="color:#24292E;">();</span></span>
+<span class="line"><span style="color:#24292E;"> ​</span></span>
+<span class="line"><span style="color:#24292E;">    axios.</span><span style="color:#6F42C1;">get</span><span style="color:#24292E;">(</span><span style="color:#032F62;">&#39;/foo/bar&#39;</span><span style="color:#24292E;">, {</span></span>
+<span class="line"><span style="color:#24292E;">       signal: controller.signal</span></span>
+<span class="line"><span style="color:#24292E;">    }).</span><span style="color:#6F42C1;">then</span><span style="color:#24292E;">(</span><span style="color:#D73A49;">function</span><span style="color:#24292E;">(</span><span style="color:#E36209;">response</span><span style="color:#24292E;">) {</span></span>
+<span class="line"><span style="color:#24292E;">       </span><span style="color:#6A737D;">//...</span></span>
+<span class="line"><span style="color:#24292E;">    });</span></span>
+<span class="line"><span style="color:#24292E;"> ​</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6A737D;">// 取消请求</span></span>
+<span class="line"><span style="color:#24292E;">    controller.</span><span style="color:#6F42C1;">abort</span><span style="color:#24292E;">();</span></span></code></pre></div></div><h2 id="跨域" tabindex="-1">跨域 <a class="header-anchor" href="#跨域" aria-label="Permalink to &quot;跨域&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">由于浏览器同源政策的限制，不同源会造成跨域（协议，域名，端口号其中一个或多个不同）</span></span>
+<span class="line"><span style="color:#e1e4e8;">跨域解决方案：</span></span>
+<span class="line"><span style="color:#e1e4e8;">1.jsonp： 解决get请求跨域，通过script标签的src不受同源政策限制的原理</span></span>
+<span class="line"><span style="color:#e1e4e8;">2.postMessage： 解决多窗口、嵌套iframe之间的跨域数据传递</span></span>
+<span class="line"><span style="color:#e1e4e8;">3.CORS跨域资源共享: 后端设置access-control-allow-origin</span></span>
+<span class="line"><span style="color:#e1e4e8;">4.中间件代理：</span></span>
+<span class="line"><span style="color:#e1e4e8;">    正向代理和反向代理</span></span>
+<span class="line"><span style="color:#e1e4e8;">    正向代理：</span></span>
+<span class="line"><span style="color:#e1e4e8;">        客户端向代理服务器发送请求并指定目标服务器，代理服务器再将请求发送给目标服务器。</span></span>
+<span class="line"><span style="color:#e1e4e8;">        正向代理可以隐藏客户端真实IP，提供匿名访问和访问控制等功能</span></span>
+<span class="line"><span style="color:#e1e4e8;">        常用于跨防火墙访问互联网、访问被封禁的网站</span></span>
+<span class="line"><span style="color:#e1e4e8;">    反向代理：</span></span>
+<span class="line"><span style="color:#e1e4e8;">        客户端发送请求到代理服务器，代理服务器判断请求的目标服务器然后发送</span></span>
+<span class="line"><span style="color:#e1e4e8;">        客户端不能直接访问目标服务器，而是通过反向代理服务器来获取服务。</span></span>
+<span class="line"><span style="color:#e1e4e8;">        反向代理可以实现负载均衡、高可用性和安全性等</span></span>
+<span class="line"><span style="color:#e1e4e8;">        常用于高并发访问、保护后端服务器、提供缓存和SSL终止等</span></span>
+<span class="line"><span style="color:#e1e4e8;">    区别：</span></span>
+<span class="line"><span style="color:#e1e4e8;">        正向代理代理客户端，反向代理代理服务器</span></span>
+<span class="line"><span style="color:#e1e4e8;">        正向代理隐藏客户端，反向代理隐藏服务器</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">由于浏览器同源政策的限制，不同源会造成跨域（协议，域名，端口号其中一个或多个不同）</span></span>
+<span class="line"><span style="color:#24292e;">跨域解决方案：</span></span>
+<span class="line"><span style="color:#24292e;">1.jsonp： 解决get请求跨域，通过script标签的src不受同源政策限制的原理</span></span>
+<span class="line"><span style="color:#24292e;">2.postMessage： 解决多窗口、嵌套iframe之间的跨域数据传递</span></span>
+<span class="line"><span style="color:#24292e;">3.CORS跨域资源共享: 后端设置access-control-allow-origin</span></span>
+<span class="line"><span style="color:#24292e;">4.中间件代理：</span></span>
+<span class="line"><span style="color:#24292e;">    正向代理和反向代理</span></span>
+<span class="line"><span style="color:#24292e;">    正向代理：</span></span>
+<span class="line"><span style="color:#24292e;">        客户端向代理服务器发送请求并指定目标服务器，代理服务器再将请求发送给目标服务器。</span></span>
+<span class="line"><span style="color:#24292e;">        正向代理可以隐藏客户端真实IP，提供匿名访问和访问控制等功能</span></span>
+<span class="line"><span style="color:#24292e;">        常用于跨防火墙访问互联网、访问被封禁的网站</span></span>
+<span class="line"><span style="color:#24292e;">    反向代理：</span></span>
+<span class="line"><span style="color:#24292e;">        客户端发送请求到代理服务器，代理服务器判断请求的目标服务器然后发送</span></span>
+<span class="line"><span style="color:#24292e;">        客户端不能直接访问目标服务器，而是通过反向代理服务器来获取服务。</span></span>
+<span class="line"><span style="color:#24292e;">        反向代理可以实现负载均衡、高可用性和安全性等</span></span>
+<span class="line"><span style="color:#24292e;">        常用于高并发访问、保护后端服务器、提供缓存和SSL终止等</span></span>
+<span class="line"><span style="color:#24292e;">    区别：</span></span>
+<span class="line"><span style="color:#24292e;">        正向代理代理客户端，反向代理代理服务器</span></span>
+<span class="line"><span style="color:#24292e;">        正向代理隐藏客户端，反向代理隐藏服务器</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>反向代理为什么叫反向代理<br> 从用户角度看，代理服务器被称为反向；从代理结构看。客户端与代理服务器属于一个局域网是正向，代理服务器和后端服务器在同一个局域网是反向</p></div>`,94),o=[e];function c(t,r,i,y,E,d){return a(),n("div",null,o)}const b=s(p,[["render",c]]);export{u as __pageData,b as default};
