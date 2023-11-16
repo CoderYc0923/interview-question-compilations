@@ -1,4 +1,4 @@
-import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"font-end/js/iq.md","filePath":"font-end/js/iq.md","lastUpdated":1699955381000}'),p={name:"font-end/js/iq.md"},e=l(`<h2 id="_1-js-数据类型" tabindex="-1">1.JS 数据类型 <a class="header-anchor" href="#_1-js-数据类型" aria-label="Permalink to &quot;1.JS 数据类型&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">基本数据类型：Number String Boolean Null Undefined BigInt Symbol</span></span>
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"font-end/js/iq.md","filePath":"font-end/js/iq.md","lastUpdated":1700112566000}'),p={name:"font-end/js/iq.md"},e=l(`<h2 id="_1-js-数据类型" tabindex="-1">1.JS 数据类型 <a class="header-anchor" href="#_1-js-数据类型" aria-label="Permalink to &quot;1.JS 数据类型&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">基本数据类型：Number String Boolean Null Undefined BigInt Symbol</span></span>
 <span class="line"><span style="color:#e1e4e8;">引用数据类型：Object(包括Array Date 正则 Function Object Map Set WeakMap WeakSet)</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">基本数据类型：Number String Boolean Null Undefined BigInt Symbol</span></span>
 <span class="line"><span style="color:#24292e;">引用数据类型：Object(包括Array Date 正则 Function Object Map Set WeakMap WeakSet)</span></span></code></pre></div><h2 id="_2-包装类型" tabindex="-1">2.包装类型 <a class="header-anchor" href="#_2-包装类型" aria-label="Permalink to &quot;2.包装类型&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">为了能在基本数据类型上执行操作，JS提供了相应的包装类型:</span></span>
 <span class="line"><span style="color:#e1e4e8;">Number String Boolean</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">为了能在基本数据类型上执行操作，JS提供了相应的包装类型:</span></span>
@@ -315,26 +315,26 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#24292e;">    then方法返回一个promise且可以被多次调用</span></span></code></pre></div><h2 id="_32-generator" tabindex="-1">32.Generator <a class="header-anchor" href="#_32-generator" aria-label="Permalink to &quot;32.Generator&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">一种特殊的函数，可以通过*关键字定义，yield关键字暂停执行并传递值，用于控制异步流程，一般与迭代器一起使用</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">一种特殊的函数，可以通过*关键字定义，yield关键字暂停执行并传递值，用于控制异步流程，一般与迭代器一起使用</span></span></code></pre></div><h2 id="_33-async-await" tabindex="-1">33.async/await <a class="header-anchor" href="#_33-async-await" aria-label="Permalink to &quot;33.async/await&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">一种异步编程解决方案，是生成器generator的语法糖，await返回一个Promise</span></span>
 <span class="line"><span style="color:#e1e4e8;">async/await 让异步函数通过同步代码的展现形式展现，提高代码可读性</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">一种异步编程解决方案，是生成器generator的语法糖，await返回一个Promise</span></span>
 <span class="line"><span style="color:#24292e;">async/await 让异步函数通过同步代码的展现形式展现，提高代码可读性</span></span></code></pre></div><h2 id="_34-事件循环" tabindex="-1">34.事件循环 <a class="header-anchor" href="#_34-事件循环" aria-label="Permalink to &quot;34.事件循环&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">浏览器中有多个进程，其中渲染进程是一个网页的重要一环</span></span>
-<span class="line"><span style="color:#e1e4e8;">渲染进程中通过渲染主线程来执行脚本、布局样式的渲染等等工作，同时为了提高运行效率，就引入了事件循环。</span></span>
-<span class="line"><span style="color:#e1e4e8;">事件循环的核心思想是开辟一个消息队列用于存放各个线程加入的任务，然后通过渲染主线程永久轮询消息队列中的任务并执行。</span></span>
+<span class="line"><span style="color:#e1e4e8;">渲染进程中通过JS引擎线程来执行脚本，由于是单线程，所以为了提高运行效率，就引入了事件循环。</span></span>
+<span class="line"><span style="color:#e1e4e8;">事件循环的核心思想是开辟一个消息队列用于存放各个线程加入的任务，然后通过JS引擎线程永久轮询消息队列中的任务并执行。</span></span>
 <span class="line"><span style="color:#e1e4e8;">而消息队列中存在同步和异步任务，其中异步任务大致分为：</span></span>
 <span class="line"><span style="color:#e1e4e8;">    1.前端计时器：setTimeout,setInterval</span></span>
 <span class="line"><span style="color:#e1e4e8;">    2.前端异步:promise等</span></span>
 <span class="line"><span style="color:#e1e4e8;">    3.网络通信： xhr fetch等</span></span>
 <span class="line"><span style="color:#e1e4e8;">    4.用户交互回调： addEventListener</span></span>
-<span class="line"><span style="color:#e1e4e8;">其次，渲染主线程在取任务时，会有一个优先级，从高到底分别是：</span></span>
+<span class="line"><span style="color:#e1e4e8;">其次，JS引擎线程在取任务时，会有一个优先级，从高到底分别是：</span></span>
 <span class="line"><span style="color:#e1e4e8;">    微任务队列： promise mutationObserver等</span></span>
 <span class="line"><span style="color:#e1e4e8;">    交互队列： 用户交互后的回调</span></span>
 <span class="line"><span style="color:#e1e4e8;">    延时队列： 计时器回调</span></span>
 <span class="line"><span style="color:#e1e4e8;">    等</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">浏览器中有多个进程，其中渲染进程是一个网页的重要一环</span></span>
-<span class="line"><span style="color:#24292e;">渲染进程中通过渲染主线程来执行脚本、布局样式的渲染等等工作，同时为了提高运行效率，就引入了事件循环。</span></span>
-<span class="line"><span style="color:#24292e;">事件循环的核心思想是开辟一个消息队列用于存放各个线程加入的任务，然后通过渲染主线程永久轮询消息队列中的任务并执行。</span></span>
+<span class="line"><span style="color:#24292e;">渲染进程中通过JS引擎线程来执行脚本，由于是单线程，所以为了提高运行效率，就引入了事件循环。</span></span>
+<span class="line"><span style="color:#24292e;">事件循环的核心思想是开辟一个消息队列用于存放各个线程加入的任务，然后通过JS引擎线程永久轮询消息队列中的任务并执行。</span></span>
 <span class="line"><span style="color:#24292e;">而消息队列中存在同步和异步任务，其中异步任务大致分为：</span></span>
 <span class="line"><span style="color:#24292e;">    1.前端计时器：setTimeout,setInterval</span></span>
 <span class="line"><span style="color:#24292e;">    2.前端异步:promise等</span></span>
 <span class="line"><span style="color:#24292e;">    3.网络通信： xhr fetch等</span></span>
 <span class="line"><span style="color:#24292e;">    4.用户交互回调： addEventListener</span></span>
-<span class="line"><span style="color:#24292e;">其次，渲染主线程在取任务时，会有一个优先级，从高到底分别是：</span></span>
+<span class="line"><span style="color:#24292e;">其次，JS引擎线程在取任务时，会有一个优先级，从高到底分别是：</span></span>
 <span class="line"><span style="color:#24292e;">    微任务队列： promise mutationObserver等</span></span>
 <span class="line"><span style="color:#24292e;">    交互队列： 用户交互后的回调</span></span>
 <span class="line"><span style="color:#24292e;">    延时队列： 计时器回调</span></span>
@@ -348,7 +348,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#e1e4e8;">    3.逐行执行代码，遇到函数调用时，会创建一个新的执行上下文</span></span>
 <span class="line"><span style="color:#e1e4e8;">    4.在每一个执行上下文中通过作用域链查找变量和函数的引用</span></span>
 <span class="line"><span style="color:#e1e4e8;">    5.内存管理和垃圾回收</span></span>
-<span class="line"><span style="color:#e1e4e8;">渲染阶段：JS执行和样式布局渲染共用同一个线程：渲染主线程，且JS执行会阻塞渲染，同时通过消息队列 + 异步来提高运行效率</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">JS的运行机制是在浏览器执行的，主要分为三个阶段：解析，执行，渲染</span></span>
+<span class="line"><span style="color:#e1e4e8;">渲染阶段：JS引擎线程执行JS代码，且JS执行会阻塞页面渲染，同时通过消息队列 + 异步来提高运行效率</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">JS的运行机制是在浏览器执行的，主要分为三个阶段：解析，执行，渲染</span></span>
 <span class="line"><span style="color:#24292e;">解析阶段：浏览器会对HTML文档进行解析，生成DOM树和CSSOM树，同时如果HTML中包含JS代码，浏览器会将其解析生成抽象语法树</span></span>
 <span class="line"><span style="color:#24292e;">执行阶段：浏览器会逐行执行JS代码，执行过程中通过作用域链和执行上下文栈来管理变量和函数的访问权限：</span></span>
 <span class="line"><span style="color:#24292e;">    1.创建全局执行上下文</span></span>
@@ -356,7 +356,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.ac004ed7.js";const u=
 <span class="line"><span style="color:#24292e;">    3.逐行执行代码，遇到函数调用时，会创建一个新的执行上下文</span></span>
 <span class="line"><span style="color:#24292e;">    4.在每一个执行上下文中通过作用域链查找变量和函数的引用</span></span>
 <span class="line"><span style="color:#24292e;">    5.内存管理和垃圾回收</span></span>
-<span class="line"><span style="color:#24292e;">渲染阶段：JS执行和样式布局渲染共用同一个线程：渲染主线程，且JS执行会阻塞渲染，同时通过消息队列 + 异步来提高运行效率</span></span></code></pre></div><h2 id="_37-cjs、amd、cmd" tabindex="-1">37.CJS、AMD、CMD <a class="header-anchor" href="#_37-cjs、amd、cmd" aria-label="Permalink to &quot;37.CJS、AMD、CMD&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">CJS、AMD、CMD都是用于JS中组织和管理模块的模块系统或规范</span></span>
+<span class="line"><span style="color:#24292e;">渲染阶段：JS引擎线程执行JS代码，且JS执行会阻塞页面渲染，同时通过消息队列 + 异步来提高运行效率</span></span></code></pre></div><h2 id="_37-cjs、amd、cmd" tabindex="-1">37.CJS、AMD、CMD <a class="header-anchor" href="#_37-cjs、amd、cmd" aria-label="Permalink to &quot;37.CJS、AMD、CMD&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">CJS、AMD、CMD都是用于JS中组织和管理模块的模块系统或规范</span></span>
 <span class="line"><span style="color:#e1e4e8;">CJS：同步加载模块，模块会在代码执行时立即加载，通过require引入module.exports导出（node.js就是用了cjs）</span></span>
 <span class="line"><span style="color:#e1e4e8;">AMD：异步加载模块，在定义模块时就声明其依赖，通过define定义，require引入（require.js用了）</span></span>
 <span class="line"><span style="color:#e1e4e8;">CMD：异步加载模块，在使用模块时才声明其依赖，更加懒加载，通过define定义，require引入（sea.js用了）</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">CJS、AMD、CMD都是用于JS中组织和管理模块的模块系统或规范</span></span>
