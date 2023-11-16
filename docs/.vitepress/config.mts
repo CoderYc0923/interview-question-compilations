@@ -39,11 +39,15 @@ export default defineConfig({
         },
         {
           text: "浏览器",
-          items: [],
+          items: [
+            { text: "基础面试题", link: "/font-end/browser/iq" },
+          ],
         },
         {
           text: "网络相关",
-          items: [],
+          items: [
+            { text: "基础面试题", link: "/font-end/internet/iq" },
+          ],
         },
         {
           text: "性能优化",
